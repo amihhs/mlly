@@ -77,7 +77,7 @@ function _resolve(id: string, options: ResolveOptions = {}): string {
         // If url is directory
         new URL(joinURL(url.pathname, "_index.js"), url),
         // TODO: Remove in next major version?
-        new URL("node_modules", url),
+        new URL(joinURL(url.pathname, "node_modules"), url),
       );
     }
   }
